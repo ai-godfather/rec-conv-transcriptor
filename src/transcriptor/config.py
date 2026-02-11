@@ -13,7 +13,7 @@ class Settings:
     DATABASE_URL: str = os.getenv("DATABASE_URL", f"sqlite:///{BASE_DIR / 'transcriptions.db'}")
 
     # Watched folder
-    WATCH_DIR: str = os.getenv("WATCH_DIR", "/Users/pt/Downloads/NAGRANIA")
+    WATCH_DIR: str = os.getenv("WATCH_DIR", str(Path.home() / "Downloads" / "NAGRANIA"))
 
     # Whisper
     WHISPER_MODEL_SIZE: str = os.getenv("WHISPER_MODEL_SIZE", "large-v3")
